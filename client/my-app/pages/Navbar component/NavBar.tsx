@@ -19,7 +19,7 @@ export default function NavBar() {
 
     <nav id="secondaryNav">
       <ul>
-        <li><a href="#"><img src="cart.png" alt=""  className="favoriteImage" /></a></li>
+        <li><a href="/ShoppingCart"><img src="cart.png" alt=""  className="favoriteImage"/></a></li>
         <li><a href="#"><img src="heart-png-16.png" alt="" className="favoriteImage" /></a></li>
       </ul>
     </nav>
@@ -35,8 +35,8 @@ export default function NavBar() {
       <ul>
         <li><a href="#"> Home </a></li>
         <li><a href="#"  onClick={() => setSmShow(true)}> Categories </a></li>
-        <li><a href="#"> About us  </a></li>
-       
+        <li><a href="#">About us</a></li>
+        <li><a href="#"> Login </a></li>
       </ul>
     </nav>
    </nav>
@@ -56,10 +56,11 @@ export default function NavBar() {
             <h1 className='bold'>Categories</h1>
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body className='dark'>
-          <h3>Men</h3>
-          <h3>Women</h3>
-          <h3>Kids</h3>
+        <Modal.Body className='categorieHover'>
+          <a href=""><h3>Clothes</h3></a>
+          <a href=""><h3>Shoes</h3></a>
+          <a href=""><h3>Accessories</h3></a>
+          <h3 id="all">All</h3>
         </Modal.Body>
       </Modal>
 </>

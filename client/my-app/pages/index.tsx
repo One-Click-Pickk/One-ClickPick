@@ -18,7 +18,7 @@ export default function Home() {
 
 
       <main className={styles.main}>
-         <h1> For her </h1>
+         <h1 id="forHer"> For her </h1>
             <SlidesWomen/>
         <br/> <br/> <br/> <br/> <br/><br/>
             <ProSlides/>
@@ -31,7 +31,7 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           <span>Powered by</span>
-          <span className={styles.logo}>
+          <span >
             <Image src="/One Click Pick png.png" alt="Vercel Logo" width={200} height={200} />
           </span>
         </a>
