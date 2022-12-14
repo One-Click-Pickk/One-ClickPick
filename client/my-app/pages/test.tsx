@@ -20,6 +20,7 @@ export default function Test() {
         return (
           <div key={e._id}>
             <h1>{e.name}</h1>
+            <img src={e.image} alt="" />
           </div>
         );
       })}

@@ -4,11 +4,13 @@ const app = express();
 const mongoose = require('mongoose');
 
 const productRoutes = require('./routes/product');
+const cartRoutes = require('./routes/cart');
 
 app.use(express.json());
 app.use(cors());
 
-app.use('/product',productRoutes)
+app.use('/product', productRoutes);
+app.use('/cart', cartRoutes);
 
 const db = 'mongodb+srv://root:root@one-click-pick.d0yoawz.mongodb.net/test';
 mongoose.set('strictQuery', true);
