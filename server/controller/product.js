@@ -45,7 +45,17 @@ const deleteProduct = (req, res) => {
     });
 };
 
-const updateProduct = (req, res) => {};
+const updateProduct = (req, res) => {
+  Product.findByIdAndUpdate(req.params._id, req.body)
+    .then((data) => {
+      res.status(200).json({ message: 'yayy updated', data });
+    })
+    .catch((err) => {
+      res
+        .status(404)
+        .json({ message: 'Product not found', error: err.message });
+    });
+};
 
 module.exports = {
   getAllProduct,
