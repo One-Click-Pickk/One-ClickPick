@@ -33,10 +33,10 @@ export default function NavBar() {
 
     <nav className="navbar">
       <ul>
-        <li><a href="#"> Home </a></li>
+        <li><a href="/"> Home </a></li>
         <li><a href="#"  onClick={() => setSmShow(true)}> Categories </a></li>
         <li><a href="#">About us</a></li>
-        <li><a href="#"> Login </a></li>
+        <li><a href="Login"> Login </a></li>
       </ul>
     </nav>
    </nav>
@@ -57,9 +57,9 @@ export default function NavBar() {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body className='categorieHover'>
-          <a href="/Itemstemplate"><h3>Clothes</h3></a>
-          <a href="/Itemstemplate"><h3>Shoes</h3></a>
-          <a href="/Itemstemplate"><h3>Accessories</h3></a>
+          <a href="/Clothes" ><h3>Clothes</h3></a>
+          <a href="/Shoes"><h3>Shoes</h3></a>
+          <a href="/Accessories"><h3>Accessories</h3></a>
           <a href="/Itemstemplate"><h3 id="all">All</h3></a>
         </Modal.Body>
       </Modal>
