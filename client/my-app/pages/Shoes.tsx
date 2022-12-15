@@ -29,9 +29,20 @@ const shoes=allProd.products.filter((e:any)=>e.category==='shoes')
                  {e.description}
                 </Card.Text>
               </Card.Body>
-              <h2>{e.price} dt</h2>
+              <h2>${e.price}</h2>
 
-              <Button variant="outline-dark"> Buy me yarojla </Button>
+              <Button
+                variant="outline-dark"
+                className="snipcart-add-item"
+                data-item-id={e._id}
+                data-item-price={e.price}
+                // data-item-description={e.description}
+                data-item-image={e.image}
+                data-item-name={e.name}
+              >
+                {' '}
+                Buy me yarojla{' '}
+              </Button>
 
               <Card.Footer>
                 <small className="text-muted">{e.date_added}</small>

@@ -9,8 +9,7 @@ import { useState, useContext, useEffect } from 'react';
 import axios from 'axios';
 export default function Clothes() {
   const allProd = useContext(AllProduct);
-const clothes = allProd.products.filter((e:any)=> e.category==='clothes')
-
+  const clothes = allProd.products.filter((e: any) => e.category === 'clothes');
 
   return (
     <>
@@ -23,13 +22,22 @@ const clothes = allProd.products.filter((e:any)=> e.category==='clothes')
               <Card.Img variant="top" src={e.image} />
               <Card.Body>
                 <Card.Title> {e.name} </Card.Title>
-                <Card.Text>
-                 {e.description}
-                </Card.Text>
+                <Card.Text>{e.description}</Card.Text>
               </Card.Body>
               <h2>{e.price} dt</h2>
 
-              <Button variant="outline-dark"> Buy me yarojla </Button>
+              <Button
+                variant="outline-dark"
+                className="snipcart-add-item"
+                data-item-id={e._id}
+                data-item-price={e.price}
+                // data-item-description={e.description}
+                data-item-image={e.image}
+                data-item-name={e.name}
+              >
+                {' '}
+                Buy me yarojla{' '}
+              </Button>
 
               <Card.Footer>
                 <small className="text-muted">{e.date_added}</small>

@@ -20,26 +20,35 @@ export default function Itemstemplate() {
       <NavBar />
 
       {data1.map((e: any) => {
-       return (
-        <CardGroup id="groupitems" key={e._id}>
-          <Card className="groupitemCard">
-            <Card.Img variant="top" src={e.image} />
-            <Card.Body>
-              <Card.Title> {e.name} </Card.Title>
-              <Card.Text>
-               {e.description}
-              </Card.Text>
-            </Card.Body>
-            <h2>{e.price} dt</h2>
+        return (
+          <CardGroup id="groupitems" key={e._id}>
+            <Card className="groupitemCard">
+              <Card.Img variant="top" src={e.image} />
+              <Card.Body>
+                <Card.Title> {e.name} </Card.Title>
+                <Card.Text>{e.description}</Card.Text>
+              </Card.Body>
+              <h2>${e.price}</h2>
 
-            <Button variant="outline-dark"> Buy me yarojla </Button>
+              <Button
+                variant="outline-dark"
+                className="snipcart-add-item"
+                data-item-id={e._id}
+                data-item-price={e.price}
+                // data-item-description={e.description}
+                data-item-image={e.image}
+                data-item-name={e.name}
+              >
+                {' '}
+                Buy me yarojla{' '}
+              </Button>
 
-            <Card.Footer>
-              <small className="text-muted">{e.date_added}</small>
-            </Card.Footer>
-          </Card>
-        </CardGroup>
-      );
+              <Card.Footer>
+                <small className="text-muted">{e.date_added}</small>
+              </Card.Footer>
+            </Card>
+          </CardGroup>
+        );
       })}
     </>
   );
