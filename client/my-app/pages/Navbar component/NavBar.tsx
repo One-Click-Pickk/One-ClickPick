@@ -19,7 +19,7 @@ export default function NavBar() {
         <nav id="secondaryNav">
           <ul>
             <li>
-              <button className="snipcart-checkout" style={{background : 'black'}}>
+              <button className="snipcart-checkout" style={{background : 'black' , border:"black"}}>
                 <img src="cart.png" alt="" className="favoriteImage" />
                 <span>${cart.subtotal?.toFixed(2)}</span>
               </button>
