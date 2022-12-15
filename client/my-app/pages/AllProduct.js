@@ -1,6 +1,4 @@
 
-
-
 import { createContext } from 'react';
 
 const AllProduct = createContext(); 

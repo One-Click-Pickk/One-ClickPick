@@ -6,10 +6,10 @@ import dumyData from './dumpData';
 import axios from 'axios';
 import { useState, createContext, useEffect } from 'react';
 
-import AllProduct from './AllProduct.js'
+import AllProduct from './AllProduct.js';
+import {StoreProvider} from './Store.js';
 
 export default function App({ Component, pageProps }: AppProps) {
-
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -27,11 +27,11 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      
+      <StoreProvider>
         <AllProduct.Provider value={{ products }}>
           <Component {...pageProps} />
         </AllProduct.Provider>
-      
+      </StoreProvider>
     </>
   );
 }

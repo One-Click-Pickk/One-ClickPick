@@ -5,37 +5,41 @@ import Button from 'react-bootstrap/Button';
 import NavBar from './Navbar component/NavBar';
 import { useState, useContext } from 'react';
 import AllProduct from './AllProduct.js';
+// import { Store } from './Store';
 export default function Itemstemplate() {
+  // const [state, dispatch] = useContext(Store);
   const allProd = useContext(AllProduct);
 
   const data1 = allProd.products;
 
+  // const addToCart = () => {
+  //   dispatch({ type: 'CART_ADD_ITEM', payload: { ...allProd, quantity: 1 } });
+  // };
   return (
     <>
       <NavBar />
 
-      {data1.map((e:any) => {
-        return (
-          <CardGroup id="groupitems" key={e._id}>
-            <Card className="groupitemCard">
-              <Card.Img variant="top" src={e.image} />
-              <Card.Body>
-                <Card.Title> {e.marque} </Card.Title>
-                <Card.Text>
-                  This is a wider card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
-                </Card.Text>
-              </Card.Body>
+      {data1.map((e: any) => {
+       return (
+        <CardGroup id="groupitems" key={e._id}>
+          <Card className="groupitemCard">
+            <Card.Img variant="top" src={e.image} />
+            <Card.Body>
+              <Card.Title> {e.name} </Card.Title>
+              <Card.Text>
+               {e.description}
+              </Card.Text>
+            </Card.Body>
+            <h2>{e.price} dt</h2>
 
-              <Button variant="outline-dark"> Buy me yarojla </Button>
+            <Button variant="outline-dark"> Buy me yarojla </Button>
 
-              <Card.Footer>
-                <small className="text-muted">Last updated 3 mins ago</small>
-              </Card.Footer>
-            </Card>
-          </CardGroup>
-        );
+            <Card.Footer>
+              <small className="text-muted">{e.date_added}</small>
+            </Card.Footer>
+          </Card>
+        </CardGroup>
+      );
       })}
     </>
   );
