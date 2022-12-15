@@ -3,30 +3,31 @@ import CardGroup from 'react-bootstrap/CardGroup';
 import Button from 'react-bootstrap/Button';
 
 import NavBar from './Navbar component/NavBar';
-import { useState, useContext } from 'react';
 import AllProduct from './AllProduct.js';
-// import { Store } from './Store';
-export default function Itemstemplate() {
-  // const [state, dispatch] = useContext(Store);
+
+import { useState, useContext, useEffect } from 'react';
+import axios from 'axios';
+export default function Shoes() {
   const allProd = useContext(AllProduct);
+const shoes=allProd.products.filter((e:any)=>e.category==='shoes')
+  // const [shoes, setShoes] = useState([]);
 
-  const data1 = allProd.products;
 
-  // const addToCart = () => {
-  //   dispatch({ type: 'CART_ADD_ITEM', payload: { ...allProd, quantity: 1 } });
-  // };
+
   return (
     <>
       <NavBar />
 
-      {data1.map((e: any) => {
+      {shoes.map((e: any) => {
         return (
           <CardGroup id="groupitems" key={e._id}>
             <Card className="groupitemCard">
               <Card.Img variant="top" src={e.image} />
               <Card.Body>
                 <Card.Title> {e.name} </Card.Title>
-                <Card.Text>{e.description}</Card.Text>
+                <Card.Text>
+                 {e.description}
+                </Card.Text>
               </Card.Body>
               <h2>${e.price}</h2>
 
