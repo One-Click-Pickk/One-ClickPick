@@ -1,15 +1,23 @@
 const Cart = require('../model/cart');
 
-const getAllCarts = (req,res) => {
+const getAllCarts = (req, res) => {
   Cart.find()
     .then((data) => {
       res.status(200).json(data);
     })
     .catch((err) => {
-      res
-        .status(404)
-        .json({ message: 'Cart not found', error: err.message });
+      res.status(404).json({ message: 'Cart not found', error: err.message });
     });
 };
 
-module.exports = { getAllCarts };
+const getUserCart = (req, res) => {
+  Cart.findOne({ userId: req.params.userId })
+    .then((data) => {
+      res.status(200).json(data);
+    })
+    .catch((err) => {
+      res.status(404).json({ message: 'Cart not found', error: err.message });
+    });
+};
+
+module.exports = { getAllCarts, getUserCart };
