@@ -34,8 +34,10 @@ export default function Home() {
           <span >
             <Image src="/One Click Pick png.png" alt="Vercel Logo" width={200} height={200} />
           </span>
+      
         </a>
       </footer>
-    </div>
+
+      </div>
   );
 }
