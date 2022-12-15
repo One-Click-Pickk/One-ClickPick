@@ -57,10 +57,10 @@ export default function NavBar() {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body className='categorieHover'>
-          <a href=""><h3>Clothes</h3></a>
-          <a href=""><h3>Shoes</h3></a>
-          <a href=""><h3>Accessories</h3></a>
-          <h3 id="all">All</h3>
+          <a href="/Itemstemplate"><h3>Clothes</h3></a>
+          <a href="/Itemstemplate"><h3>Shoes</h3></a>
+          <a href="/Itemstemplate"><h3>Accessories</h3></a>
+          <a href="/Itemstemplate"><h3 id="all">All</h3></a>
         </Modal.Body>
       </Modal>
 </>
