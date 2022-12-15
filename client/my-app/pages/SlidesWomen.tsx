@@ -1,32 +1,49 @@
+import dumyData from "./dumpData.js"
+import { useState } from "react"
 
 
 export default function SlidesWomen() {
-  return (
-    <div className='slides'>
 
-        <img src="left.png" alt="" id="left"/>
+  const[index,setindex]=useState(0)
 
-        <img src="img1.png" alt="" />
+
+  var indexModif=(action: string)=>{
+    if ( action === "+" ){
+      setindex(index+1)
+      if(index>=dumyData.length-1){
+        setindex(0)
+      }
+    }else{
+      setindex(index-1)
+      if(index===0){
+        setindex(dumyData.length-1)
+      }
+    }
+  }
+
+
+      return(
+        
+        <div className='slides'>
+
+        <img src="left.png" alt="" id="left" onClick={()=>{indexModif("-")}}/>
+
+        <img src={dumyData[index].image} alt="" />
 
 
 
         <div className="slidesDetails">
-        <h2> Slides </h2>
-        <h5>Lorem ipsum dolor sit amet céonsectetur adipisicing elit. Maxime mollitia,
-            molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-            numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-            optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
-            obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
-            nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
-            tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
-            quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos 
-            sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam
-            recusandae alias error harum maxime adipisci amet laborum. Perspiciatis
+        <h2> {dumyData[index].marque} </h2>
+        
+        <h5>
+          {dumyData[index].description}
         </h5>
-        </div>
 
-        <img src="right.png" alt="" id="right"/>
+        </div> 
+
+        <img src="right.png" alt="" id="right" onClick={()=>indexModif("+")}/>
 
     </div>
-  )
-}
+      )
+    }
+  

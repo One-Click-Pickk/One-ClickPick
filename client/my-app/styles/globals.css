@@ -35,7 +35,8 @@ a {
 #bigNav{
   height: 400px;
   width: 100%;
-  background-image: url("/navbar component.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)),url("/navbar component.png");
+
   background-repeat: none;
   background-size: cover;
 }
@@ -143,6 +144,7 @@ a {
 .inputSearch{
   border-radius: 2em;
   height: 2em;
+  padding: 3px 15px 3px 15px;
 }
 
 .gradient-custom-2 {
@@ -167,6 +169,10 @@ a {
   border-bottom-right-radius: .3rem;
   }
   }
+
+.categorieHover a:hover{
+  color:burlywood;
+}
 
 
 
@@ -227,6 +233,43 @@ a {
 
 .dark{
   background-color: rgba(0, 0, 0, 0.107);
+}
+
+#forHer{
+  margin-top: 5%;
+}
+
+#test{
+  background-color: #c1b7a4;
+}
+
+#bgcart{
+  height: 1100px;
+  background-image: url("/navbar component.png");
+  
+  background-size: cover;
+}
+
+#all{
+  font-weight: bolder;
+  float: right;
+}
+
+
+#groupitems{
+  margin-top: 20px;
+  width: 30%;
+  display: grid;
+  display: inline-block;
+}
+
+#groupitems .groupitemCard{
+  margin: 0 25px 25px;
+  border-radius: 2em;
+  padding: 2em;
+  box-shadow: 2px 5px 20px 2px rgba(0, 0, 0, 0.17);
+  display: inline-block;
+  display: grid;
 }
 
 
