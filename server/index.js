@@ -16,7 +16,6 @@ app.get("/logout", usersController.logout);
 
 
 
-
 const db = 'mongodb+srv://root:root@one-click-pick.d0yoawz.mongodb.net/test';
 mongoose.set('strictQuery', true);
 mongoose
