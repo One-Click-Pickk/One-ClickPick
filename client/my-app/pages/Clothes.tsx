@@ -3,22 +3,14 @@ import CardGroup from 'react-bootstrap/CardGroup';
 import Button from 'react-bootstrap/Button';
 
 import NavBar from './Navbar component/NavBar';
+import AllProduct from './AllProduct.js';
+
 import { useState, useContext, useEffect } from 'react';
 import axios from 'axios';
 export default function Clothes() {
-  const [clothes, setClothes] = useState([]);
+  const allProd = useContext(AllProduct);
+const clothes = allProd.products.filter((e:any)=> e.category==='clothes')
 
-  useEffect(() => {
-    filtrClothes();
-  }, []);
-  const filtrClothes = () => {
-    axios
-      .get(`http://localhost:8080/product/`)
-      .then((data) => {
-        setClothes(data.data.filter((e:any)=>e.category === 'clothes'));
-      })
-      .catch((err) => console.log(err));
-  };
 
   return (
     <>

@@ -5,20 +5,14 @@ import Button from 'react-bootstrap/Button';
 import NavBar from './Navbar component/NavBar';
 import { useState, useContext, useEffect } from 'react';
 import axios from 'axios';
-export default function Accessories() {
-  const [accessories, setAcc] = useState([]);
+import AllProduct from './AllProduct.js';
 
-  useEffect(() => {
-    filtrAccessories();
-  }, []);
-  const filtrAccessories = () => {
-    axios
-      .get(`http://localhost:8080/product/`)
-      .then((data) => {
-        setAcc(data.data.filter((e: any) => e.category === 'accessories'));
-      })
-      .catch((err) => console.log(err));
-  };
+export default function Accessories() {
+  // const [accessories, setAcc] = useState([]);
+  const allProd = useContext(AllProduct);
+  const accessories = allProd.products.filter(
+    (e: any) => e.category === 'accessories'
+  );
 
   return (
     <>
