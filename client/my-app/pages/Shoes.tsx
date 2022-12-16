@@ -20,6 +20,7 @@ const shoes=allProd.products.filter((e:any)=>e.category==='shoes')
 
       {shoes.map((e: any) => {
         return (
+          
           <CardGroup id="groupitems" key={e._id}>
             <Card className="groupitemCard">
               <Card.Img variant="top" src={e.image} />

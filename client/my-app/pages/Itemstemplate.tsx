@@ -35,7 +35,7 @@ export default function Itemstemplate() {
                 className="snipcart-add-item"
                 data-item-id={e._id}
                 data-item-price={e.price}
-                // data-item-description={e.description}
+                data-item-description={e.description}
                 data-item-image={e.image}
                 data-item-name={e.name}
               >
