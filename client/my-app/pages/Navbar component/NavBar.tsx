@@ -9,8 +9,11 @@ export default function NavBar() {
   const[searchView,setSearcView]=useState(false)
 
   const [smShow, setSmShow] = useState(false);
+  const [showMe, setShowMe] = useState(false);
+    function toggle(){
+    setShowMe(!showMe);
 
-
+    }
 
   return (
     <>
@@ -36,7 +39,7 @@ export default function NavBar() {
         <li><a href="#"> Home </a></li>
         <li><a href="#"  onClick={() => setSmShow(true)}> Categories </a></li>
         <li><a href="#">About us</a></li>
-        <li><a href="#"> Login </a></li>
+        {/* <li><a href="/Login" onClick={toggle} style={{display: "inline"}}> Login </a></li> */}
       </ul>
     </nav>
    </nav>
