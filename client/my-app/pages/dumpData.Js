@@ -1,4 +1,4 @@
-var dumyData=[
+var slidesData=[
     {
         marque:"GuCHUUUUUUU",
         description:"mech normal mansouh bih 3alekher seeeehbii",
@@ -26,4 +26,12 @@ var dumyData=[
     }
 ]
 
-module.exports= dumyData
+var favoriteData=[
+    {
+        marque:"GuCHUUUUUUU",
+        description:"mech normal mansouh bih 3alekher seeeehbii",
+        image:"img1.png",
+    }
+]
+
+module.exports= {slidesData,favoriteData}

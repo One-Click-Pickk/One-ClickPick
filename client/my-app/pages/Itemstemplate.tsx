@@ -6,6 +6,7 @@ import NavBar from './Navbar component/NavBar.tsx';
 
 import AppContext from './AppContext.js'
 import {useState,useContext} from "react"
+import productData from "./productDumyData.js"
 
 export default function Itemstemplate() {
 
@@ -18,17 +19,17 @@ export default function Itemstemplate() {
     <>
     <NavBar/>
     
-    {data.map((e)=>{
+    {productData.map((e)=>{
       return (
         <CardGroup id="groupitems">
       <Card className="groupitemCard">
         <Card.Img variant="top" src={e.image}   />
         <Card.Body>
-          <Card.Title>  {e.marque}   </Card.Title>
+          <Card.Title>  {e.name}   </Card.Title>
           <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
+            {e.description}
           </Card.Text>
+          <h3 className="price">{e.price}</h3>
         </Card.Body>
 
         <Button variant="outline-dark"> Buy me yarojla </Button>

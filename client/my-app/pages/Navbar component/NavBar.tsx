@@ -20,7 +20,7 @@ export default function NavBar() {
     <nav id="secondaryNav">
       <ul>
         <li><a href="/ShoppingCart"><img src="cart.png" alt=""  className="favoriteImage"/></a></li>
-        <li><a href="#"><img src="heart-png-16.png" alt="" className="favoriteImage" /></a></li>
+        <li><a href="/Favorite"><img src="heart-png-16.png" alt="" className="favoriteImage" /></a></li>
       </ul>
     </nav>
 
@@ -33,10 +33,10 @@ export default function NavBar() {
 
     <nav className="navbar">
       <ul>
-        <li><a href="#"> Home </a></li>
+        <li><a href="/"> Home </a></li>
         <li><a href="#"  onClick={() => setSmShow(true)}> Categories </a></li>
         <li><a href="#">About us</a></li>
-        <li><a href="#"> Login </a></li>
+        <li><a href="/Favorite"> Login </a></li>
       </ul>
     </nav>
    </nav>

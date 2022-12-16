@@ -1,4 +1,4 @@
-import dumyData from "./dumpData.js"
+import {slidesData} from "./dumpData.js"
 import { useState } from "react"
 
 
@@ -10,13 +10,13 @@ export default function SlidesWomen() {
   var indexModif=(action: string)=>{
     if ( action === "+" ){
       setindex(index+1)
-      if(index>=dumyData.length-1){
+      if(index>=slidesData.length-1){
         setindex(0)
       }
     }else{
       setindex(index-1)
       if(index===0){
-        setindex(dumyData.length-1)
+        setindex(slidesData.length-1)
       }
     }
   }
@@ -28,15 +28,15 @@ export default function SlidesWomen() {
 
         <img src="left.png" alt="" id="left" onClick={()=>{indexModif("-")}}/>
 
-        <img src={dumyData[index].image} alt="" />
+        <img src={slidesData[index].image} alt="" />
 
 
 
         <div className="slidesDetails">
-        <h2> {dumyData[index].marque} </h2>
+        <h2> {slidesData[index].marque} </h2>
         
         <h5>
-          {dumyData[index].description}
+          {slidesData[index].description}
         </h5>
 
         </div> 
