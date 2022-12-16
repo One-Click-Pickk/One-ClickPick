@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useRouter } from 'next/router';
-import User from "../../../server/model/user"
+// import User from "../../../server/model/user"
 
 
 
