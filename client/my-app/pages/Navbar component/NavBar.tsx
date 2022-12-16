@@ -7,7 +7,15 @@ export default function NavBar() {
   const [searchView, setSearcView] = useState(false);
 
   const [smShow, setSmShow] = useState(false);
+
+  const [showMe, setShowMe] = useState(false);
+    function toggle(){
+    setShowMe(!showMe);
+
+    }
+
   const { cart = {} } = useSnipcart();
+
 
   return (
     <>
@@ -15,6 +23,17 @@ export default function NavBar() {
         <a id="ourLogo">
           <img src="/One Click Pick png.png" />
         </a>
+
+
+    <nav className="navbar">
+      <ul>
+        <li><a href="#"> Home </a></li>
+        <li><a href="#"  onClick={() => setSmShow(true)}> Categories </a></li>
+        <li><a href="#">About us</a></li>
+        {/* <li><a href="/Login" onClick={toggle} style={{display: "inline"}}> Login </a></li> */}
+      </ul>
+    </nav>
+   </nav>
 
         <nav id="secondaryNav">
           <ul>
