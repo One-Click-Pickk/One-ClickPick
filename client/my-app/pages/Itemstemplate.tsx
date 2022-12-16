@@ -39,8 +39,7 @@ export default function Itemstemplate() {
                 data-item-image={e.image}
                 data-item-name={e.name}
               >
-                {' '}
-                Buy me yarojla{' '}
+                Add to cart
               </Button>
 
               <Card.Footer>

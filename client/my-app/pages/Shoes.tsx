@@ -9,10 +9,8 @@ import { useState, useContext, useEffect } from 'react';
 import axios from 'axios';
 export default function Shoes() {
   const allProd = useContext(AllProduct);
-const shoes=allProd.products.filter((e:any)=>e.category==='shoes')
+  const shoes = allProd.products.filter((e: any) => e.category === 'shoes');
   // const [shoes, setShoes] = useState([]);
-
-
 
   return (
     <>
@@ -20,15 +18,12 @@ const shoes=allProd.products.filter((e:any)=>e.category==='shoes')
 
       {shoes.map((e: any) => {
         return (
-          
           <CardGroup id="groupitems" key={e._id}>
             <Card className="groupitemCard">
               <Card.Img variant="top" src={e.image} />
               <Card.Body>
                 <Card.Title> {e.name} </Card.Title>
-                <Card.Text>
-                 {e.description}
-                </Card.Text>
+                <Card.Text>{e.description}</Card.Text>
               </Card.Body>
               <h2>${e.price}</h2>
 
@@ -41,8 +36,7 @@ const shoes=allProd.products.filter((e:any)=>e.category==='shoes')
                 data-item-image={e.image}
                 data-item-name={e.name}
               >
-                {' '}
-                Buy me yarojla{' '}
+                Add to cart
               </Button>
 
               <Card.Footer>
