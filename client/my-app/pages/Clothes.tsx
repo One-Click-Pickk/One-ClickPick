@@ -24,7 +24,7 @@ export default function Clothes() {
                 <Card.Title> {e.name} </Card.Title>
                 <Card.Text>{e.description}</Card.Text>
               </Card.Body>
-              <h2>{e.price} dt</h2>
+              <h2>${e.price}</h2>
 
               <Button
                 variant="outline-dark"
@@ -34,9 +34,7 @@ export default function Clothes() {
                 // data-item-description={e.description}
                 data-item-image={e.image}
                 data-item-name={e.name}
-              >
-                {' '}
-                Buy me yarojla{' '}
+              >Add to cart
               </Button>
 
               <Card.Footer>

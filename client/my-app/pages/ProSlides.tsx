@@ -10,8 +10,8 @@ export default function ProSlides() {
             alt="First slide"
           />
           <Carousel.Caption className='shades'>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h3>Bauletto mini top handle bag</h3>
+            <p>The top handle bag is reimagined in a new duffle style, part of the House's latest collection Exquisite Gucci</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -22,8 +22,8 @@ export default function ProSlides() {
           />
   
           <Carousel.Caption className='shades'>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h3>WOMEN'S BALENCIAGA </h3>
+            <p>adidas Triple S Trainers in white, black and grey double foam and mesh are done in collaboration with adidas.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
